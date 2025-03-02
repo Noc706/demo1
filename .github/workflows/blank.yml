@@ -23,6 +23,6 @@ jobs:
             
       # Add any build or restart commands here, e.g.:
       # - name: Install dependencies
-      #   run: ssh -i private_key -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /root/demo && npm install"
+      #   run: ssh -i private_key -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /root/demo1 && npm install"
       # - name: Restart service
       #   run: ssh -i private_key -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo systemctl restart your-service"
