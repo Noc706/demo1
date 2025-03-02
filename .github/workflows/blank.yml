@@ -18,6 +18,9 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
           chmod 600 private_key
 
+      - name: Create Target Directory
+        run: ssh -i private_key -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "mkdir -p /root/demo1"
+
       - name: Deploy Files via SCP
         run: scp -i private_key -o StrictHostKeyChecking=no -r ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/demo1
             
